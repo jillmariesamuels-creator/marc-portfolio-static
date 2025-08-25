@@ -1,0 +1,79 @@
+
+<!doctype html>
+<html lang="en" class="">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Marc Steinberg — Portfolio</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container nav">
+        <div style="display:flex;align-items:center;gap:12px">
+          <div style="height:36px;width:36px;border-radius:999px;background:#111"></div>
+          <div>
+            <div style="font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:#666">Marc Steinberg</div>
+            <div style="font-weight:600">Visual & Fine Arts</div>
+          </div>
+        </div>
+        <div class="tabs">
+          <button data-tab="Gallery" class="active">Gallery</button>
+          <button data-tab="About">About</button>
+          <button data-tab="Contact">Contact</button>
+          <button id="themeToggle" class="toggle" style="margin-left:8px">Dark</button>
+        </div>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <h2 style="font-size:32px;line-height:1.2;font-weight:650;margin:0">Classical training, contemporary voice.</h2>
+          <p style="margin-top:12px;color:#666">From graphite studies to expressive oils and abstraction, this portfolio spans portraits, still life, figurative work, landscapes, and digital-era explorations.</p>
+          <div style="margin-top:18px;display:flex;gap:10px;flex-wrap:wrap">
+            <a href="#tabGallery" data-tab="Gallery" class="toggle">View Gallery</a>
+            <a href="#tabAbout" data-tab="About" class="toggle">Read Bio</a>
+          </div>
+        </div>
+        <div class="hero-img">
+          <img id="heroImg" alt="Featured artwork" />
+        </div>
+      </div>
+    </section>
+
+    <main id="tabGallery" class="container" style="padding:24px 0;">
+      <div class="controls">
+        <div id="filters" class="filters"></div>
+        <input id="search" class="search" placeholder="Search title, medium, style…" />
+      </div>
+
+      <div id="grid" class="grid"></div>
+    </main>
+
+    <section id="tabAbout" class="container hidden" style="padding:36px 0;">
+      <h3 style="font-size:24px;font-weight:650;margin:0">Artist Bio</h3>
+      <p style="margin-top:12px;max-width:70ch;color:#666">Marc Steinberg is a Canadian visual artist whose practice spans classical drawing, figurative oil painting, still life, and abstract expression. His training in traditional techniques informs a contemporary sensibility—balancing structure, gesture, and color. Alongside studio work, Marc has expanded into digital media with coursework in Adobe After Effects, applying motion and design thinking to modern presentations of fine art.</p>
+    </section>
+
+    <section id="tabContact" class="container hidden" style="padding:36px 0;">
+      <h3 style="font-size:24px;font-weight:650;margin:0">Contact</h3>
+      <p style="margin-top:8px;color:#666">For commissions, exhibitions, collaborations, or licensing inquiries:</p>
+      <div style="margin-top:10px">
+        <div>📧 <a href="mailto:gods_son810@hotmail.com">gods_son810@hotmail.com</a></div>
+        <div>📷 Instagram: <a href="https://instagram.com/conceivedimmaculately" target="_blank">@conceivedimmaculately</a></div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container" style="display:flex;align-items:center;justify-content:space-between">
+        <div>© <span id="year"></span> Marc Steinberg</div>
+        <div>Embeddable on Behance via iframe</div>
+      </div>
+    </footer>
+
+    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
